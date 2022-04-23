@@ -4,8 +4,10 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 require('dotenv').config();
 const Router = require('./src/routes/resource');
+const dbConnect = require('./src/db');
 const app = express();
 
+dbConnect()
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
