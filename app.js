@@ -3,7 +3,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 require('dotenv').config();
-const Router = require('./src/routes/resource');
+const Router = require('./src/routes/place');
 const dbConnect = require('./src/db');
 const app = express();
 
@@ -15,6 +15,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //complete with your resource
-app.use('/resource', Router);
+app.use('/place', Router);
 
 module.exports = app;
