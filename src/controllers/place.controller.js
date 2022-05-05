@@ -64,8 +64,19 @@ const deleteOnePlace = async (req, res) => {
 };
 const modifyOnePlace = async (req, res) => {
     const id = parseInt(req.params.id)
-    Place.findOneAndUpdate({_id:id},(err,s) => {
-        
+    const data = req.body
+    console.log(data)
+    Joi.assert(data,placeSchema)
+    Place.findByIdAndUpdate(id,data,(err,p) =>{
+      if (err){
+        res.status(404).json({
+          error:"place doesn't exists"
+        })
+      } else {
+        res.status(200).json({
+          message:"place has benn modified"
+        })
+      }
     })
 };
 

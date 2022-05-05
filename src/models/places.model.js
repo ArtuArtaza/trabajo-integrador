@@ -10,6 +10,8 @@ const PlaceSchema = new Schema({
     seasons: [String],
     image:[String],
     created: String,
+    coords: Array,
+    ubication: String,
 })
 
 
