@@ -72,4 +72,4 @@ Actividad #2: Programación de los endpoints para un CRUD de un recurso. Reempla
     
 -   DELETE :: /resources/:id ---> Borra un elemento de la base de datos.
     
--   PATCH :: /resources/:id ---> Edita un resource con los datos enviados en body. Verificar body con Joi.
+-   PATCH :: /resources/:id ---> Edita un resource con los datos enviados en body. Verificar body con Joi.# MERNSTACK
